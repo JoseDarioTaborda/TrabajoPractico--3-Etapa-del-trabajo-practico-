@@ -10,7 +10,7 @@ router.get('/byId/:id'), (req, res)=>{
 
     connection.query(query,[id],(error, results)=>{
         if(error){  
-            console.log('Error al ejecutar la query, error')
+            console.log('Error fatal al ejecutar la query, error')
             res.send(500).json('Error al ejecutar la consulta')        
         }else{ 
             res.status(200).json('results')
